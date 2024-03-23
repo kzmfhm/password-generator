@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import Todos from "./components/Todos";
+import AddTodo from "./components/AddTodo";
 
 export default function App() {
   const [length, setLength] = useState(8);
@@ -84,6 +86,8 @@ export default function App() {
           </div>
         </div>
       </div>
+      <AddTodo />
+      <Todos />
     </div>
   );
 }
