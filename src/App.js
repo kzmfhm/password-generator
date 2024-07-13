@@ -1,13 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import AddTodo from "./components/AddTodo";
-import Todos from "./components/Todos";
-import ButtonPress from "./components/Buttons/PressMe";
 
 export default function App() {
   const [length, setLength] = useState(8);
   const [numberAllowed, setNumberAllowed] = useState(false);
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState("");
+
   const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -87,11 +85,8 @@ export default function App() {
               <label htmlFor="charInput">Characters</label>
             </div>
           </div>
-          <AddTodo />
-          <Todos />
         </div>
       </div>
-      <ButtonPress />
     </>
   );
 }
